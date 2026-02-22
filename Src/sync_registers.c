@@ -206,6 +206,7 @@ uint8_t RI_SetRegisterMotor1(uint16_t regID, uint8_t typeID, uint8_t *data, uint
           break;
         }
 
+
         default:
         {
           retVal = MCP_ERROR_UNKNOWN_REG;
@@ -318,6 +319,8 @@ uint8_t RI_SetRegisterMotor1(uint16_t regID, uint8_t typeID, uint8_t *data, uint
         case MC_REG_V_D:
         case MC_REG_V_ALPHA:
         case MC_REG_V_BETA:
+        case MC_REG_STOPLL_EL_ANGLE:
+        case MC_REG_STOPLL_ROT_SPEED:
         {
           retVal = MCP_ERROR_RO_REG;
           break;
@@ -407,6 +410,33 @@ uint8_t RI_SetRegisterMotor1(uint16_t regID, uint8_t typeID, uint8_t *data, uint
         case MC_REG_SPEED_REF:
         {
           MCI_ExecSpeedRamp(pMCIN,((((int16_t)regdata32) * ((int16_t)SPEED_UNIT)) / (int16_t)U_RPM), 0);
+          break;
+        }
+
+        case MC_REG_ACIM_LSO_K:
+        {
+        	FloatToU32 ReadVal; //cstat !MISRAC2012-Rule-19.2
+        	ReadVal.U32_Val = regdata32;
+        	ACIM_LSO_Component_M1.k = ReadVal.Float_Val;
+           break;
+        }
+
+
+        case MC_REG_ACIM_LSO_KP:
+        {
+        	FloatToU32 ReadVal; //cstat !MISRAC2012-Rule-19.2
+        	ReadVal.U32_Val = regdata32;
+        	ACIM_LSO_Component_M1.fPI->fKpGain = ReadVal.Float_Val;
+        	ACIM_LSO_Component_M1.fPI->fDefKpGain = ReadVal.Float_Val;
+          break;
+        }
+
+        case MC_REG_ACIM_LSO_KI:
+        {
+        	FloatToU32 ReadVal; //cstat !MISRAC2012-Rule-19.2
+        	ReadVal.U32_Val = regdata32;
+        	ACIM_LSO_Component_M1.fPI->fKiGain = ReadVal.Float_Val;
+        	ACIM_LSO_Component_M1.fPI->fDefKiGain = ReadVal.Float_Val;
           break;
         }
 
@@ -830,6 +860,18 @@ uint8_t RI_GetRegisterGlobal(uint16_t regID,uint8_t typeID,uint8_t * data,uint16
               break;
             }
 
+            case MC_REG_STOPLL_ROT_SPEED:
+            {
+            	*regdata16 = ACIM_LSO_Component_M1._SpeedEstimator.hAvrMecSpeedUnit;
+                break;
+            }
+
+            case MC_REG_STOPLL_EL_ANGLE:
+            {
+            	*regdata16 = ACIM_LSO_Component_M1.hElAngle;
+                break;
+            }
+
             case MC_REG_DAC_USER1:
             case MC_REG_DAC_USER2:
               break;
@@ -887,6 +929,7 @@ uint8_t RI_GetRegisterGlobal(uint16_t regID,uint8_t typeID,uint8_t * data,uint16
               break;
             }
 
+
             default:
             {
               retVal = MCP_ERROR_UNKNOWN_REG;
@@ -933,6 +976,30 @@ uint8_t RI_GetRegisterGlobal(uint16_t regID,uint8_t typeID,uint8_t * data,uint16
               FloatToU32 ReadVal; //cstat !MISRAC2012-Rule-19.2
               ReadVal.Float_Val = PQD_GetAvrgElMotorPowerW(pMPM[M1]);
               *regdataU32 = ReadVal.U32_Val; //cstat !UNION-type-punning
+              break;
+            }
+
+            case MC_REG_ACIM_LSO_K:
+            {
+            	FloatToU32 ReadVal; //cstat !MISRAC2012-Rule-19.2
+            	ReadVal.Float_Val = ACIM_LSO_Component_M1.k;
+            	*regdataU32 = ReadVal.U32_Val; //cstat !UNION-type-punning
+              break;
+            }
+
+            case MC_REG_ACIM_LSO_KP:
+            {
+                FloatToU32 ReadVal; //cstat !MISRAC2012-Rule-19.2
+                ReadVal.Float_Val = ACIM_LSO_Component_M1.fPI->fDefKpGain;
+                *regdataU32 = ReadVal.U32_Val; //cstat !UNION-type-punning
+              break;
+            }
+
+            case MC_REG_ACIM_LSO_KI:
+            {
+                FloatToU32 ReadVal; //cstat !MISRAC2012-Rule-19.2
+                ReadVal.Float_Val = ACIM_LSO_Component_M1.fPI->fDefKiGain;
+                *regdataU32 = ReadVal.U32_Val; //cstat !UNION-type-punning
               break;
             }
 

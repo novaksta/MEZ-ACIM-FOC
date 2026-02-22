@@ -1,0 +1,57 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+# Toolchain: GNU Tools for STM32 (13.3.rel1)
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_ifoc.c \
+C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_lso_foc.c \
+C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_vf_control.c \
+C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/circle_limitation.c \
+C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pi_float_regulator.c \
+C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pwm.c \
+C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/unit_conversions.c 
+
+OBJS += \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_ifoc.o \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_lso_foc.o \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_vf_control.o \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/circle_limitation.o \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pi_float_regulator.o \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pwm.o \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/unit_conversions.o 
+
+C_DEPS += \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_ifoc.d \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_lso_foc.d \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_vf_control.d \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/circle_limitation.d \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pi_float_regulator.d \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pwm.d \
+./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/unit_conversions.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_ifoc.o: C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_ifoc.c MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -c -I../../Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/G4xx/Inc -I../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/CMSIS/DSP/Include -Ofast -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_lso_foc.o: C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_lso_foc.c MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -c -I../../Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/G4xx/Inc -I../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/CMSIS/DSP/Include -Ofast -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_vf_control.o: C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_vf_control.c MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -c -I../../Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/G4xx/Inc -I../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/CMSIS/DSP/Include -Ofast -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/circle_limitation.o: C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/circle_limitation.c MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -c -I../../Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/G4xx/Inc -I../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/CMSIS/DSP/Include -Ofast -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pi_float_regulator.o: C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pi_float_regulator.c MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -c -I../../Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/G4xx/Inc -I../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/CMSIS/DSP/Include -Ofast -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pwm.o: C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pwm.c MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -c -I../../Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/G4xx/Inc -I../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/CMSIS/DSP/Include -Ofast -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/unit_conversions.o: C:/Users/Stanislav\ NOVAK/Downloads/swap/MEZ-ACIM-FOC/MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/unit_conversions.c MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -c -I../../Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc -I../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/Any/Inc -I../../MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLib/G4xx/Inc -I../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/CMSIS/DSP/Include -Ofast -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+
+clean: clean-MCSDK_v6-2e-4-2e-1-2d-Full-2f-MotorControl-2f-MCSDK-2f-MCLibACIM-2f-Any-2f-Src
+
+clean-MCSDK_v6-2e-4-2e-1-2d-Full-2f-MotorControl-2f-MCSDK-2f-MCLibACIM-2f-Any-2f-Src:
+	-$(RM) ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_ifoc.cyclo ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_ifoc.d ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_ifoc.o ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_ifoc.su ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_lso_foc.cyclo ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_lso_foc.d ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_lso_foc.o ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_lso_foc.su ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_vf_control.cyclo ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_vf_control.d ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_vf_control.o ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/acim_vf_control.su ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/circle_limitation.cyclo ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/circle_limitation.d ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/circle_limitation.o ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/circle_limitation.su ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pi_float_regulator.cyclo ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pi_float_regulator.d ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pi_float_regulator.o ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pi_float_regulator.su ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pwm.cyclo ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pwm.d ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pwm.o ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/pwm.su ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/unit_conversions.cyclo ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/unit_conversions.d ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/unit_conversions.o ./MCSDK_v6.4.1-Full/MotorControl/MCSDK/MCLibACIM/Any/Src/unit_conversions.su
+
+.PHONY: clean-MCSDK_v6-2e-4-2e-1-2d-Full-2f-MotorControl-2f-MCSDK-2f-MCLibACIM-2f-Any-2f-Src
+

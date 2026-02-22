@@ -134,9 +134,8 @@ void ACIM_LSO_CalcAngle(ACIM_LSO_Handle_t *pHandle)
   
   pHandle->fRotorElSpeed_obs_rads = PI_Float_Calc(pHandle->fPI, fSpeedEstError);
  
-  
-  pHandle->_SpeedEstimator.hAvrMecSpeedUnit =    (int16_t)((pHandle->fRotorElSpeed_obs_rads*10.0f)/(2.0f*(float)PI* fPP));
-  pHandle->fRotorSpeed_RPM = (float)pHandle->_SpeedEstimator.hAvrMecSpeedUnit*6.0f;
+  pHandle->_SpeedEstimator.hAvrMecSpeedUnit =    (int16_t)(SPEED_UNIT*(pHandle->fRotorElSpeed_obs_rads)/(2.0f*(float)PI* fPP));
+  pHandle->fRotorSpeed_RPM = U_RPM*(pHandle->fRotorElSpeed_obs_rads)/(2.0f*PI* fPP);
   
   
   /* STEP  3 - Computing of rotor frequency */
@@ -185,7 +184,7 @@ void ACIM_LSO_CalcAngle(ACIM_LSO_Handle_t *pHandle)
   pHandle->fIqds_obs_A = fIqds_obs_A;
   pHandle->fFlux_qdr_obs.fS_Component2 = fFlux_qdr_obs.fS_Component2;
 
-  
+
   pHandle->hElAngle = Convert_Rad_to16bit(pHandle->fRotorFlux_Angle_rad);
 }
 

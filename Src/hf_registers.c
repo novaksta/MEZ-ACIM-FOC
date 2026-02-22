@@ -158,6 +158,19 @@ __weak uint8_t HF_GetPtrReg(uint16_t dataID, void **dataPtr)
             break;
           }
 
+          case MC_REG_STOPLL_ROT_SPEED:
+          {
+            *dataPtr = &(ACIM_LSO_Component_M1._SpeedEstimator.hAvrMecSpeedUnit);
+            break;
+          }
+
+          case MC_REG_STOPLL_EL_ANGLE:
+          {
+            *dataPtr = &(ACIM_LSO_Component_M1.hElAngle);
+            break;
+          }
+
+
           default:
           {
             *dataPtr = &nullData16;

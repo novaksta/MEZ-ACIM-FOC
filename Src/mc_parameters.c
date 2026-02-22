@@ -30,7 +30,7 @@ ScaleParams_t scaleParams_M1 =
 {
  .voltage = NOMINAL_BUS_VOLTAGE_V/(1.73205 * 32767), /* sqrt(3) = 1.73205 */
  .current = CURRENT_CONV_FACTOR_INV,
- .frequency = (1.15 * MAX_APPLICATION_SPEED_UNIT * U_RPM)/(32768* SPEED_UNIT)
+ .frequency = U_RPM/SPEED_UNIT ///(1.15 * MAX_APPLICATION_SPEED_UNIT * U_RPM)/(32768* SPEED_UNIT)
 };
 
 #define FREQ_RATIO 1                /* Dummy value for single drive */
